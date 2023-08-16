@@ -1,7 +1,4 @@
-Claro! Abaixo está o conteúdo formatado para um arquivo README.md. Esse arquivo pode ser colocado na raiz do projeto do script para oferecer uma documentação clara e acessível sobre o que o script faz e como usá-lo.
-
 ---
-
 # Script de Importação de Segredos para Terraform 🗝
 
 ## O que esse script faz? 🤔
@@ -80,7 +77,7 @@ Esse script é tipo um "faz-tudo" pra quem está usando o AWS Secrets Manager ju
 ```python
 AWS_REGION = 'sa-east-1'
 bucket_name = "terraform-southrock-uat"
-key_name = "secrets-manager/ledger-secrets-uat.state"
+key_name = "secrets-manager/my-secrets-uat.state"
 ```
 
 Define as constantes utilizadas ao longo do script, incluindo a região da AWS, o nome do bucket S3 e a chave para o estado do Terraform.
@@ -145,5 +142,3 @@ Quando o script é executado, ele:
 Depois disso, seu Terraform tá pronto pra gerenciar seus segredos na AWS. Se deu algum problema, respira fundo, lê a mensagem de erro e tenta de novo. Google é teu amigo nessas horas! 😉
 
 ---
-
-Este arquivo README.md pode ser colocado no diretório do seu projeto de código. Ele será apresentado de forma bem formatada quando alguém abrir o repositório do seu projeto no GitHub, por exemplo, facilitando o entendimento do que o projeto faz e como utilizá-lo.
