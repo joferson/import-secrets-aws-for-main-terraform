@@ -43,6 +43,7 @@ Esse script é tipo um "faz-tudo" pra quem está usando o AWS Secrets Manager ju
 #### 1.4 Instalar o Boto3
 - **Como instala?**  
    Abre o terminal e digita:
+
    ```sh
    pip install boto3
    ```
@@ -51,6 +52,7 @@ Esse script é tipo um "faz-tudo" pra quem está usando o AWS Secrets Manager ju
 
 - **Como faz?**  
    Abre o terminal e digita:
+
    ```sh
    aws configure
    ```
@@ -86,6 +88,7 @@ Define as constantes utilizadas ao longo do script, incluindo a região da AWS, 
 ### `list_secrets()`
 
 ```python
+
 def list_secrets():
     ...
 ```
@@ -97,6 +100,7 @@ def list_secrets():
 ### `get_secret_value(secret_name)`
 
 ```python
+
 def get_secret_value(secret_name):
     ...
 ```
@@ -122,6 +126,7 @@ def format_secret_string(secret_value_json):
 ### `generate_terraform_config(secret_names)`
 
 ```python
+
 def generate_terraform_config(secret_names):
     ...
 ```
@@ -133,6 +138,7 @@ def generate_terraform_config(secret_names):
 ### `generate_backend_config()`
 
 ```python
+
 def generate_backend_config():
     ...
 ```
@@ -153,6 +159,7 @@ def initialize_terraform():
 ### `import_secrets_to_terraform(secret_names)`
 
 ```python
+
 def import_secrets_to_terraform(secret_names):
     ...
 ```
