@@ -61,7 +61,7 @@
    ```
    python nome_do_script.py
    ```
-   (troca `nome_do_script.py` pelo nome que tá o nosso script, tipo `python import_secrets.py`).
+   (troca `nome_do_script.py` pelo nome que tá o nosso script`).
 
 3. **O que esperar?**  
    Se tudo deu certo, ele vai criar um arquivo `main.tf` com todas as configurações e vai mostrar umas mensagens tipo 'Arquivo main.tf gerado com sucesso.' e 'Todos os segredos foram importados.'.
