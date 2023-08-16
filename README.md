@@ -1,76 +1,71 @@
----
+# Documentação - Como Rodar o Script de Importação de Segredos para Terraform
 
-# Script de Importação de Segredos para Terraform 🗝
+## Passo 1: Instalação das Ferramentas Necessárias
 
-## O que esse script faz? 🤔
+### 1.1 Instalar Python
 
-Esse script é tipo um "faz-tudo" pra quem está usando o AWS Secrets Manager junto com o Terraform. Ele faz três coisas principais:
+1. **O que é?**  
+   Python é a linguagem que a gente usou pra escrever esse script. Você precisa dele pra rodar o script.
 
-1. **Lista os Segredos:**  
-   Ele pede pra AWS listar todos os segredos que você tem lá no Secrets Manager.
+2. **Como instala?**  
+   Entra no site oficial (https://www.python.org/downloads/) e baixa a versão mais recente. Só seguir os passos que aparecem na tela, é bem tranquilo.
 
-2. **Gera o Arquivo Terraform:**  
-   Com essa lista de segredos, ele cria um arquivo chamado `main.tf`. Esse arquivo é uma receitinha que diz pro Terraform como gerenciar esses segredos.
+### 1.2 Instalar o Terraform
 
-3. **Inicializa e Importa os Segredos pro Terraform:**  
-   Ele prepara o Terraform pra trabalhar com esses segredos e manda o Terraform importar todos eles.
+1. **O que é?**  
+   O Terraform é o cara que vai cuidar de organizar nossos segredos na AWS.
 
-## Antes de Começar: O que você vai precisar 🛠
+2. **Como instala?**  
+   Entra na página de downloads do Terraform (https://www.terraform.io/downloads.html), escolhe o sistema operacional que você tá usando e segue as instruções.
 
-- Python 3 instalado no seu computador.
-- Terraform instalado no seu computador.
-- AWS CLI instalado e configurado no seu computador.
-- Boto3, que é a biblioteca do Python para a AWS.
+### 1.3 Instalar o AWS CLI
 
-(Sem stress, tá tudo explicado mais pra baixo como instalar e configurar essas coisas.)
+1. **O que é?**  
+   É uma ferramenta que a gente usa pra conversar com os serviços da AWS direto do nosso terminal.
 
-## Passo a Passo: Como Rodar esse Script 🚀
+2. **Como instala?**  
+   Entra nesse link (https://aws.amazon.com/pt/cli/) e segue os passos. É rapidinho.
 
-### Passo 1: Instalação das Ferramentas Necessárias
+### 1.4 Instalar o Boto3
 
-#### 1.1 [Instalar Python](https://www.python.org/downloads/)
-- **Como instala?**  
-   Baixa a versão mais recente e instala seguindo os passos que aparecem na tela. É bem tranquilo.
+1. **O que é?**  
+   É a biblioteca do Python que a gente usa pra conversar com a AWS.
 
-#### 1.2 [Instalar o Terraform](https://www.terraform.io/downloads.html)
-- **Como instala?**  
-   Escolhe o sistema operacional que você tá usando e segue as instruções.
-
-#### 1.3 [Instalar o AWS CLI](https://aws.amazon.com/pt/cli/)
-- **Como instala?**  
-   Entra nesse link e segue os passos. É rapidinho.
-
-#### 1.4 Instalar o Boto3
-- **Como instala?**  
+2. **Como instala?**  
    Abre o terminal e digita:
-   ```sh
+   ```
    pip install boto3
    ```
+   (Se o `pip` não estiver instalado, ele é instalado junto com o Python. Se deu problema, googla "instalar pip" que é fácil de resolver).
 
-### Passo 2: Configurar a AWS CLI
+## Passo 2: Configurar a AWS CLI
 
-- **Como faz?**  
+1. **O que é?**  
+   Antes do script conversar com a AWS, ele precisa saber quem é você e quais permissões você tem.
+
+2. **Como faz?**  
    Abre o terminal e digita:
-   ```sh
+   ```
    aws configure
    ```
-   Ele vai pedir umas informações que você pega lá no teu painel da AWS (Access Key, Secret Key, etc).  
+   Ele vai pedir umas informações, que você pega lá no teu painel da AWS (Access Key, Secret Key, etc).  
    Pra região, coloca `sa-east-1` (ou outra região que você prefira).
 
-### Passo 3: Rodar o Script
+## Passo 3: Rodar o Script
 
-- **Como faz?**  
+1. **O que é?**  
+   Agora é a hora da verdade. Vamos rodar nosso script e ver a mágica acontecer!
+
+2. **Como faz?**  
    Navega no terminal até onde tá o nosso script e digita:
-   ```sh
+   ```
    python nome_do_script.py
    ```
    (troca `nome_do_script.py` pelo nome que tá o nosso script, tipo `python import_secrets.py`).
 
-- **O que esperar?**  
+3. **O que esperar?**  
    Se tudo deu certo, ele vai criar um arquivo `main.tf` com todas as configurações e vai mostrar umas mensagens tipo 'Arquivo main.tf gerado com sucesso.' e 'Todos os segredos foram importados.'.
 
 ## E isso é tudo, pessoal!
 
-Depois disso, seu Terraform tá pronto pra gerenciar seus segredos na AWS. Se deu algum problema, respira fundo, lê a mensagem de erro  e tenta de novo. Google é teu amigo nessas horas! 😉
-
----
+Depois disso, seu Terraform tá pronto pra gerenciar seus segredos na AWS. Se deu algum problema, respira fundo, lê a mensagem de erro e tenta de novo. Google é teu amigo nessas horas! 😉
