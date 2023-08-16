@@ -1,4 +1,5 @@
 ---
+
 # Script de Importação de Segredos para Terraform 🗝
 
 ## O que esse script faz? 🤔
