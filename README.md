@@ -76,7 +76,7 @@ Esse script é tipo um "faz-tudo" pra quem está usando o AWS Secrets Manager ju
 ```python
 AWS_REGION = 'sa-east-1'
 bucket_name = "terraform-southrock-uat"
-key_name = "secrets-manager/my-secrets-uat.state"
+key_name = "secrets-manager/ledger-secrets-uat.state"
 ```
 
 Define as constantes utilizadas ao longo do script, incluindo a região da AWS, o nome do bucket S3 e a chave para o estado do Terraform.
@@ -139,3 +139,4 @@ Quando o script é executado, ele:
 ## E isso é tudo, pessoal!
 
 Depois disso, seu Terraform tá pronto pra gerenciar seus segredos na AWS. Se deu algum problema, respira fundo, lê a mensagem de erro e tenta de novo. Google é teu amigo nessas horas! 😉
+
