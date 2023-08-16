@@ -1,4 +1,3 @@
----
 # Script de Importação de Segredos para Terraform 🗝
 
 ## O que esse script faz? 🤔
@@ -140,5 +139,3 @@ Quando o script é executado, ele:
 ## E isso é tudo, pessoal!
 
 Depois disso, seu Terraform tá pronto pra gerenciar seus segredos na AWS. Se deu algum problema, respira fundo, lê a mensagem de erro e tenta de novo. Google é teu amigo nessas horas! 😉
-
----
