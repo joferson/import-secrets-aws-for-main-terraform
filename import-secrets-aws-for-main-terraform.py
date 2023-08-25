@@ -53,6 +53,7 @@ def generate_terraform_config(secret_names):
             file.write('}\n\n')
 
             file.write(f'resource "aws_secretsmanager_secret_version" "{resource_name}_version" {{\n')
+            file.write(f'  depends_on     = [aws_secretsmanager_secret.{resource_name}]\n')
             file.write(f'  secret_id     = aws_secretsmanager_secret.{resource_name}.id\n')
             file.write('  secret_string = <<EOT\n')
             file.write(f'{formatted_secret_string}\n')
